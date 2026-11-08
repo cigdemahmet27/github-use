@@ -1,0 +1,18 @@
+# Runs the tests automatically on every push and every pull request.
+# You will see a green check (or red X) on your PRs because of this file.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest -v
