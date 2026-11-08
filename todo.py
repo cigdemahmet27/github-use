@@ -35,7 +35,7 @@ def remove(todos, index):
 
 def format_todos(todos):
     if not todos:
-        return "Nothing to do!"
+        return "All Clear!"
     lines = []
     for i, t in enumerate(todos, start=1):
         mark = "x" if t["done"] else " "
