@@ -19,6 +19,11 @@ class TestTodo(unittest.TestCase):
         todos = complete(add(add([], "a"), "b"), 0)
         self.assertEqual(format_todos(todos), "1. [x] a\n2. [ ] b")
 
+    def test_remove(self):
+        from todo import remove
+        self.assertEqual(remove(add([], "a"), 0), [])
+
+
 
 if __name__ == "__main__":
     unittest.main()

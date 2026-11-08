@@ -28,6 +28,10 @@ def complete(todos, index):
     todos[index]["done"] = True
     return todos
 
+def remove(todos, index):
+    todos.pop(index)
+    return todos
+
 
 def format_todos(todos):
     if not todos:
@@ -49,6 +53,9 @@ def main(argv):
     elif argv[1] == "done":
         save(complete(todos, int(argv[2]) - 1))
         print("Marked as done.")
+    elif argv[1] == "remove":
+        save(remove(todos, int(argv[2]) - 1))
+        print("Removed.")
     elif argv[1] == "version":
         print(__version__)
     else:
