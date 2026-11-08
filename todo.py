@@ -59,7 +59,7 @@ def main(argv):
     elif argv[1] == "version":
         print(__version__)
     else:
-        print("Usage: python todo.py [list | add <text> | done <number> | version]")
+        print("Usage: python todo.py [list | add <text> | done <number>| remove <number> | version]")
 
 
 if __name__ == "__main__":
