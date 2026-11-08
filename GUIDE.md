@@ -231,8 +231,8 @@ gh release create v0.2.0 --title "v0.2.0" --generate-notes
 Look at the **Releases** section on the repo page. GitHub auto-attaches source-code zips,
 and `--generate-notes` lists the merged PRs. 🎉
 
-Try it: `git checkout v0.0.0` won't exist, but `git checkout v0.2.0` will — tags let you jump
-back to any released version (`git switch main` to return).
+Try it: `git checkout v0.2.0` — tags let you jump back to any released version
+(`git switch main` to return).
 
 ---
 
